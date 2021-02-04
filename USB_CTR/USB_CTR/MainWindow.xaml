@@ -1,0 +1,261 @@
+﻿<Window x:Class="USB_CTR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:USB_CTR"
+        mc:Ignorable="d"
+        Title="USB_CTR" Height="720" Width="650"
+        Background="#FF333333">
+    <Grid>
+        <!--USB Connection -->
+        <GroupBox 
+            HorizontalAlignment="Left" 
+            Margin="10,10,0,0"
+            VerticalAlignment="Top" 
+            Width="250" 
+            Height="80" 
+            Background="#545454">
+            <GroupBox.Header>
+                <Label Foreground="White">USB Connection</Label>
+            </GroupBox.Header>
+            <Grid>
+                <ComboBox 
+                    Name="ConnectCyUsbComboBox"
+                    HorizontalAlignment="Left" 
+                    Margin="10,5,10,10" 
+                    VerticalAlignment="Top" 
+                    Width="218"
+                    Height="20"
+                    FontSize="11"
+                    FontWeight="Bold"/>
+            </Grid>
+        </GroupBox>
+
+        <!--USB IN OUT ENDPOINT -->
+        <GroupBox 
+            HorizontalAlignment="Left" 
+            Margin="270,10,10,10"
+            VerticalAlignment="Top" 
+            Width="350" 
+            Height="80" 
+            Background="#545454">
+            <GroupBox.Header>
+                <Label Foreground="White">USB IN/OUT ENDPOINT</Label>
+            </GroupBox.Header>
+            <Grid>
+                <Label 
+                    Content="IN" 
+                    HorizontalAlignment="Left" 
+                    Margin="0,0,0,0" 
+                    VerticalAlignment="Top" 
+                    Foreground="White"
+                    FontSize="10"
+                    FontWeight="Bold"/>
+                <ComboBox
+                    Name="ConnectCyUsbInEndpointComboBox"
+                    HorizontalAlignment="Right" 
+                    Margin="10,0,5,10" 
+                    VerticalAlignment="Top" 
+                    Width="280"
+                    Height="20"
+                    FontSize="11"
+                    FontWeight="Bold"/>
+                <Label 
+                    Content="OUT" 
+                    HorizontalAlignment="Left" 
+                    Margin="0,0,0,0" 
+                    VerticalAlignment="Bottom" 
+                    Foreground="White"
+                    FontSize="10"
+                    FontWeight="Bold"/>
+                <ComboBox 
+                    Name="ConnectCyUsbOutEndpointComboBox"
+                    HorizontalAlignment="Right" 
+                    Margin="10,10,5,0" 
+                    VerticalAlignment="Bottom"
+                    Width="280"
+                    Height="20"
+                    FontSize="11"
+                    FontWeight="Bold" />
+            </Grid>
+        </GroupBox>
+
+        <!--Send CMD Line Meesage-->
+        <GroupBox 
+            HorizontalAlignment="Right" 
+            Margin="10,90,20,0"
+            VerticalAlignment="Top" 
+            Width="230" 
+            Height="90" 
+            Background="#545454">
+            <GroupBox.Header>
+                <Label Foreground="White">Input Data (Format: Hex)</Label>
+            </GroupBox.Header>
+            <Grid>
+                <TextBox
+                    Name="AddDataTextBox"
+                    HorizontalAlignment="Left"
+                    Width="300" 
+                    Margin="5,5,5,5"
+                    VerticalAlignment="Top"
+                    Background="White"/>
+                <Button
+                    x:Name="AddDataButton"
+                    Content="Add Hex CMD" 
+                    HorizontalAlignment="Right"
+                    Width="100"
+                    Height="20" 
+                    Margin="5,5,5,5"
+                    FontSize="10"
+                    FontWeight="Bold"
+                    VerticalAlignment="Bottom" 
+                    Click="AddDataButton_Click"/>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox 
+            HorizontalAlignment="Right" 
+            Margin="10,180,20,0"
+            VerticalAlignment="Top" 
+            Width="230" 
+            Height="185" 
+            Background="#545454">
+            <GroupBox.Header>
+                <Label Foreground="White">Send Data List</Label>
+            </GroupBox.Header>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="161*"/>
+                    <ColumnDefinition Width="57*"/>
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="ResetDataButton"
+                    Content="RESET Data List" 
+                    HorizontalAlignment="Left"
+                    Width="100"
+                    Height="20" 
+                    Margin="5,5,0,0"
+                    FontSize="10"
+                    FontWeight="Bold"
+                    VerticalAlignment="Top" 
+                    Click="ResetDataButton_Click"/>
+                <Button
+                    x:Name="SendDataButton"
+                    Content="SEND All" 
+                    HorizontalAlignment="Right"
+                    Width="100"
+                    Height="20" 
+                    Margin="0,5,5,0"
+                    FontSize="10"
+                    FontWeight="Bold"
+                    VerticalAlignment="Top" 
+                    Click="SendDataButton_Click" Grid.ColumnSpan="2"/>
+                <ListBox 
+                    x:Name="SendDataListBox"
+                    Margin="5,40,5,5"
+                    FontSize="10"
+                    FontWeight="Bold"
+                    TextBlock.LineHeight="8" 
+                    TextBlock.LineStackingStrategy="BlockLineHeight" Grid.ColumnSpan="2"
+                    />
+            </Grid>
+        </GroupBox>
+
+        <GroupBox 
+            HorizontalAlignment="Right" 
+            Margin="10,370,20,0"
+            VerticalAlignment="Top" 
+            Width="230" 
+            Height="275" 
+            Background="#545454">
+            <GroupBox.Header>
+                <Label Foreground="White">Log List</Label>
+            </GroupBox.Header>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="161*"/>
+                    <ColumnDefinition Width="57*"/>
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="ResetLogButton"
+                    Content="Reset Log" 
+                    HorizontalAlignment="Right"
+                    Width="100"
+                    Height="20" 
+                    Margin="0,5,5,0"
+                    FontSize="10"
+                    FontWeight="Bold"
+                    VerticalAlignment="Top" 
+                    Click="ResetLogButton_Click" Grid.ColumnSpan="2"/>
+                <TextBox 
+                Name="LogListBox" 
+                Margin="5,40,0,0"
+                Padding="5" 
+                Height="200" 
+                VerticalAlignment="Top" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                FontSize="10"
+                FontWeight="Bold"
+                TextBlock.LineHeight="8" 
+                TextBlock.LineStackingStrategy="BlockLineHeight" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="208" />
+            </Grid>
+        </GroupBox>
+
+
+
+        <!--TxData View-->
+        <GroupBox 
+            HorizontalAlignment="Left"
+            Margin="10,90,10,10"
+            VerticalAlignment="Top" 
+            Background="#545454">
+            <GroupBox.Header>
+                <Label Foreground="White">Tx Data View</Label>
+            </GroupBox.Header>
+            <TextBox 
+                Name="TxDataListBox"
+                HorizontalAlignment="Left" 
+                Margin="10,10,10,10"
+                Padding="5"
+                Width="335" 
+                Height="225" 
+                VerticalAlignment="Top" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                FontSize="10"
+                FontWeight="Bold"
+                TextBlock.LineHeight="8" 
+                TextBlock.LineStackingStrategy="BlockLineHeight" />
+
+        </GroupBox>
+
+
+        <!--RxData View-->
+        <GroupBox 
+            HorizontalAlignment="Left"
+            Margin="10,370,10,10"
+            VerticalAlignment="Top" 
+            Background="#545454">
+            <GroupBox.Header>
+                <Label Foreground="White">Rx Data View</Label>
+            </GroupBox.Header>
+            <TextBox 
+                Name="RxDataListBox"
+                HorizontalAlignment="Left" 
+                Margin="10,10,10,10"
+                Padding="5"
+                Width="335" 
+                Height="225" 
+                VerticalAlignment="Top" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                FontSize="10"
+                FontWeight="Bold"
+                TextBlock.LineHeight="8" 
+                TextBlock.LineStackingStrategy="BlockLineHeight" />
+
+        </GroupBox>
+
+
+    </Grid>
+</Window>

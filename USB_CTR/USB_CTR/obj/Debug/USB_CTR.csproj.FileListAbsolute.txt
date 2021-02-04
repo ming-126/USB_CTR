@@ -1,0 +1,17 @@
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\bin\Debug\USB_CTR.exe.config
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\bin\Debug\USB_CTR.exe
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\bin\Debug\USB_CTR.pdb
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\bin\Debug\CyUSB.dll
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR.csprojAssemblyReference.cache
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\MainWindow.g.cs
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\App.g.cs
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR_MarkupCompile.cache
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR_MarkupCompile.lref
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\MainWindow.baml
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR.g.resources
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR.Properties.Resources.resources
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR.csproj.GenerateResource.cache
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR.csproj.CoreCompileInputs.cache
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR.csproj.CopyComplete
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR.exe
+C:\Users\SMJ18\source\repos\USB_CTR\USB_CTR\obj\Debug\USB_CTR.pdb
